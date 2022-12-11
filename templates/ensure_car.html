@@ -1,0 +1,11 @@
+<h1>Застрахуй машину</h1>
+Выбирай тип:
+<div display: inline-block;></div>
+    {% for type in types %}
+    <div onclick="location.href='/ensure_car/{{type['id']}}'">
+        <p styles="cursor: pointer;">{{type['name']}}</p>
+        <p>{{type['cost']}}</p>
+
+    </div>
+    {% endfor %}
+</div>

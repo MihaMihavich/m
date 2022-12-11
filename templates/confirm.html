@@ -1,0 +1,16 @@
+<h2>Страхование прошло успешно</h2>
+<h4>Данные:</h4>
+Тип: {{item['name']}}
+<br>
+Цена: {{item['cost']}}
+<br>
+<hr>
+{%if car_mark:%}
+Марка авто {{car_mark}}
+<br>
+Номер авто {{car_num}}
+{%endif%}
+С вами свяжутся..
+
+<a href="{{url_for('my_ens')}}" role="button">Мои страховки</a>
+<a href="{{url_for('myself')}}" role="button">На главную</a>

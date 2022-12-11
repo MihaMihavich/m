@@ -1,0 +1,40 @@
+<form action="" method="post">
+    <div>
+        <label for="surname"><b>Фамилия</b></label>
+        <input name="surname" type="text" placeholder="Name" required="required" />
+    </div>
+    <div>
+        <label for="name"><b>Имя</b></label>
+        <input name="name" type="text" placeholder="Name" required="required" />
+    </div>
+    <div>
+        <label for="fname"><b>Отчество</b></label>
+        <input name="fname" type="text" placeholder="Name" required="required" />
+    </div>
+    <div>
+        <label for="country"><b>Гражданство</b></label>
+        <input name="country" type="text" placeholder="Name" required="required" />
+    </div>
+    <div>
+        <label for="passport"><b>Номер пасспорта</b></label>
+        <input name="passport" type="text" placeholder="Name" required="required" />
+    </div>
+<div>
+    <label for="phone"><b>Телефон</b></label>
+    <input name="phone" type="text" placeholder="Email" required="required" />
+</div>
+
+<div>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+</div>
+<div>
+
+    <label for="psw2"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw2" required>
+</div>
+    <button type="submit" class="my-btn" >Регистрация</button>
+</form>
+
+<b>Есть аккаунт?</b>
+<a class="my-btn" href="{{url_for('signin')}}">Войти</a>

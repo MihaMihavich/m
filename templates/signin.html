@@ -1,0 +1,13 @@
+<form action="" method="post">
+
+    <input name="phone" type="text" placeholder="phone" required="required" />
+    <input type="password" name="password" placeholder="Password" required="required" />
+    <div>
+    <label for="remainme">Запомнить меня</label>
+    <input type="checkbox" name="remainme" title="Запомнить меня"/> 
+    <button type="submit">Войти</button>
+    </div>
+</form>
+
+<b>Ещё нет аккаунта?</b>
+<a href="{{url_for('signup')}}">Регистрация</a>
