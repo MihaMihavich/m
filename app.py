@@ -35,7 +35,7 @@ def index():
 @app.route("/signin", methods=['POST', 'GET'])
 def signin():
     if current_user.is_authenticated:
-        return redirect(url_for('myself'))
+        return redirect(url_for('myself.html'))
 
     if request.method == 'POST':
         phone = request.form['phone']

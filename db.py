@@ -76,7 +76,7 @@ def get_my_life(id):
 
 def get_my_cars(id):
     with Database() as curs:
-        _SQL = f"""SELECT name, timing FROM user_car INNER JOIN car_type ON user_car.idtype = car_type.id and user_car.iduser = {id};"""
+        _SQL = f"""SELECT name, timing, mark, number FROM (user_car INNER JOIN car_type ON user_car.idtype = car_type.id and user_car.iduser = {id}) inner join cars on cars.id = user_car.idcar;"""
         curs.execute(_SQL)
         return curs.fetchall()
 
@@ -91,4 +91,6 @@ def get_ens_car(id):
         _SQL = f"""SELECT * from car_type where id = {id};"""
         curs.execute(_SQL)
         return curs.fetchone()
+    
+
 
